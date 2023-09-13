@@ -6,13 +6,15 @@ Challenge: A directory contains multiple files and directories of non-uniform fi
 
 The backend uses Python 3. The backend requirements are defined in the `requirements.txt` file:
 ```
-cd backend 
 python3 -m pip install -r requirements.txt
 ```
 
 Run the backend development server:
 ```
-python backend.py
+# cd into the root of the repo
+# The relative paths in the backend depend on this
+
+python backend/backend.py
 ```
 The backend has been tested with Flask 1.1.2 and Python 3.8.8 .
 

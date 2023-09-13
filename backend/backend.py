@@ -15,10 +15,7 @@ from flask import g # for sqlite3
 from config import DATABASE_PATH
 from config import TABLE_NAME
 from config import FIELDS_NAMES
-
-
-BASEDIR_PATH = './test_data'
-STORAGE_PATH = './db.pickle'
+from config import TEST_DATA_PATH
 
 app = Flask(
     __name__, 
@@ -169,7 +166,7 @@ def list_files():
 
 @app.route('/create_index', methods=['POST'])
 def create_index():
-    base_directory = Path(BASEDIR_PATH)
+    base_directory = Path(TEST_DATA_PATH)
 
     files = []
     for child in base_directory.glob('**/*.*'):
